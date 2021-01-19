@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="CSS-Selectors.css"> -->
+    <title>Document</title>
+    <style>
+     /* .html-class{
+            color:red;
+        } */
+    /* #paragraph-one{
+        color:burlywood;
+    } */
+
+    /* child selector -immediate children
+    descendant selector - all the descendants*/
+    /* div p span{} */
+    /* .div-one > span{
+        color:crimson;
+    } */
+
+    /* adjacent sibling */
+    ul + span{
+        color:darkgreen;
+    }
+
+    /* general sibling */
+    ul ~ span{
+        border:2px solid black;
+    }
+
+    div + p{
+        color:darkmagenta;
+    }
+    p + p{
+        color:darkolivegreen;
+    }
+    ul ~ span{
+        color:yellowgreen;
+    }
+
+    [class="three"]{
+        background-color: wheat;
+    }
+    </style>
+</head>
+<body>
+    <!-- Inline CSS - using style attribute 
+        Internal CSS - using a style tag
+        External CSS - using a separate .css file and importing it using <link> tag-->
+    <div class="div-one">
+        <p>Lorem ipsum dolor sit.</p>
+        <p><span>
+            HTML
+        </span>CSS</p>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <span>Span 1</span>
+        <span>Span 2</span>
+    </div>
+    <div class="three">
+        <p>Div 2 paragraph 1</p>
+    </div>
+
+    <p>Outside div</p>
+</body>
+</html>
