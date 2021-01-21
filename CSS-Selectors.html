@@ -40,8 +40,32 @@
         color:yellowgreen;
     }
 
-    [class="three"]{
-        background-color: wheat;
+    /* [id]{
+        background-color: rosybrown;
+    }
+    [id="list"]{
+        background-color: rosybrown;
+    } */
+   /* [id ^= "i"]{
+       background-color: rosybrown;
+   } */
+/* [class$="e"]{
+   background-color: rosybrown;
+} */
+
+/* [class*="on"]{
+    border:3px solid brown;
+} */
+    /* div+span+p{
+        border:2px solid black;
+    } */
+
+    div~p{
+        border: 2px solid rebeccapurple;
+    }
+
+    [href*="l"]{
+        background-color: orange;
     }
     </style>
 </head>
@@ -49,12 +73,12 @@
     <!-- Inline CSS - using style attribute 
         Internal CSS - using a style tag
         External CSS - using a separate .css file and importing it using <link> tag-->
-    <div class="div-one">
+    <div class="div-one" >
         <p>Lorem ipsum dolor sit.</p>
         <p><span>
             HTML
         </span>CSS</p>
-        <ul>
+        <ul id="list" >
             <li>one</li>
             <li>two</li>
             <li>three</li>
@@ -63,9 +87,18 @@
         <span>Span 2</span>
     </div>
     <div class="three">
-        <p>Div 2 paragraph 1</p>
+        <p id="id-one">Div 2 paragraph 1</p>
     </div>
 
     <p>Outside div</p>
+    <div class="last">
+        <p>Inside last div p</p>
+
+    </div>
+    <span>Last span</span>
+    <p>last p</p>
+    <a href="media.html" target="">Click here</a>
+    <a href="form.html" target="">Next</a>
+    <a href="form.html" target="">Prev</a>
 </body>
 </html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Pseudo classes
+         */
+         a{
+             font-weight: bold;
+             font-size: 20px;
+         }
+        a:link{
+            color:crimson;
+        }
+       
+        a:visited{
+            color:darkgreen;
+        }
+        a:hover{
+            color:black;
+        }
+        a:active{
+            color:blue;
+        }
+     
+        input:focus{
+            background-color: burlywood;
+        }
+
+        /* li:first-child{
+            background-color: chocolate;
+        } */
+        /* li:last-child{
+            background-color: chocolate;
+        } */
+
+        /* li:nth-child(2){
+            background-color: chocolate;
+        } */
+        /* li:nth-last-child(3){
+            background-color: chocolate;
+        } */
+
+        /* p:first-of-type{
+            background-color: chocolate;
+        } */
+        /* p:last-of-type{
+            background-color: coral;
+        } */
+
+        span:only-child{
+            border:1px solid black
+        }
+        p:only-of-type{
+            background-color: coral;
+        }
+
+        /* Pseudo elements */
+        li{
+           list-style-type: none;
+        }
+        li::before{
+            content:url(bullet.PNG);
+            
+        }
+
+        li::after{
+            /* content:url(bullet.PNG); */
+            content:'==>'
+        }
+        li::selection{
+            background-color:black;
+            color:whitesmoke;
+        }
+
+        .div-one p:first-of-type::first-line{
+                font-size: 30px;
+                font-weight: bold;
+                color:orange ;      
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="div-one" >
+        <p>Lorem ipsum dolor sit.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, esse. Veniam cumque, dolores iste aut rem expedita animi quae illum.
+        </p>
+        <p><span>
+            HTML
+        </span>CSS</p>
+        <p>Last p in div-one</p>
+        <ul id="list" >
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+            <li>four</li>
+            <li>five</li>
+            <li>six</li>
+            <li>seven</li>
+        </ul>
+        <span>Span 1</span>
+        <span>Span 2</span>
+    </div>
+    <div class="three">
+        <p id="id-one">Div 2 paragraph 1</p>
+    </div>
+
+    <p>Outside div</p>
+    <div class="last">
+        <p>Inside last div p</p>
+
+    </div>
+    <span>Last span</span>
+    <p>last p</p>
+    <a href="https://www.google.com">Google</a>
+    <input type="text" placeholder="Enter Name">
+</body>
+</html>
