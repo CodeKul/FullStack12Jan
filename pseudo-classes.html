@@ -61,25 +61,30 @@
         li{
            list-style-type: none;
         }
+
         li::before{
-            content:url(bullet.PNG);
-            
+            content:url('chipotle.jpg')
         }
 
-        li::after{
-            /* content:url(bullet.PNG); */
-            content:'==>'
-        }
-        li::selection{
-            background-color:black;
-            color:whitesmoke;
+        li:after{
+            content:'==> +';
         }
 
-        .div-one p:first-of-type::first-line{
-                font-size: 30px;
-                font-weight: bold;
-                color:orange ;      
+        p::selection{
+            background-color: crimson;
+            color:black;
         }
+
+        p::first-letter{
+            font-size: 30px;
+            color:darkgreen;
+        }
+
+        p::first-line{
+            font-size:30px;
+            font-weight: bold;
+        }
+       
 
 
 
