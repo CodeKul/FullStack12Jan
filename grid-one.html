@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            width:600px;
+            display:grid;
+            grid-template-columns:100px 100px 100px;
+            /* grid-template-rows:100px; */
+            grid-gap:5px;
+
+            background-color: grey;
+        }
+        .one,.two,.three,.four,.five,.six{
+            background-color: darkolivegreen;
+            /* height:100px;
+            width:100px; */
+        }
+        .one{
+            grid-column:1/4;
+        }
+
+        .two{
+            grid-row:2/4;
+        }
+        .four{
+            grid-row:2/5;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div class="one">One</div>
+        <div class="two">Two</div>
+        <div class="three">Three</div>
+        <div class="four">Four</div>
+        <div class="five">Five</div>
+        <div class="six">Six</div>
+        <div class="five">Five</div>
+    </div>   
+        
+</body>
+</html>
