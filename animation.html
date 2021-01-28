@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background-color: cadetblue;
+            animation-name:moveAround;
+            animation-duration: 6s;
+            animation-delay:4s;
+            animation-timing-function:ease-out;
+            animation-direction:alternate-reverse;
+            animation-iteration-count:infinite;
+            /* animation:moveAround 6s 4s ease-out alternate */
+            position:relative;
+
+        }
+
+        div:hover{
+            animation-play-state:paused;
+        }
+
+        @keyframes moveAround {
+            /* from{background-color: cadetblue;left:0;top:0}
+            to{background-color: darkolivegreen;left:300px;top:0} */
+
+            0%{
+                background-color: cadetblue;
+                left:0;
+                top:0;
+            }
+            25%{
+                background-color: crimson;
+                left:300px;
+                top:0;
+            }
+            50%{
+                background-color: darkgoldenrod;
+                left:300px;
+                top:300px;
+            }
+            75%{
+                background-color: darkmagenta;
+                left:0;
+                top:300px;
+            }
+            100%{
+                background-color: cadetblue;
+                left:0;
+                top:0;
+
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>
