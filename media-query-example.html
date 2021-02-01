@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            max-width:900px;
+            margin:0 auto;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .columns{
+            display: flex;
+            margin-bottom:10px;
+           
+        }
+        .col-1{
+            background-color: gray;
+            color:white;
+        }
+
+        .col-1,.col-2{
+            padding: 10px;
+        }
+
+        @media (max-width:550px){
+            .columns{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Media Queries</h1>
+        <div class="columns">
+            <div class="col-1">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis expedita quos aut dolore sit quae commodi quam excepturi earum! Officia sed sint architecto laborum reprehenderit neque corporis, modi tempore facilis?</p>
+            </div>
+            <div class="col-2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim obcaecati aut. Pariatur vitae vel expedita perferendis deserunt. Deleniti impedit magni voluptatibus beatae rerum sit ratione quae esse optio omnis?
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quibusdam corrupti nemo reprehenderit aliquid nulla totam debitis? Delectus est, nulla odit harum dicta illum molestiae. At, officia! Reiciendis, sit laudantium.
+                </p>
+            </div>
+            <div class="col-1">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis expedita quos aut dolore sit quae commodi quam excepturi earum! Officia sed sint architecto laborum reprehenderit neque corporis, modi tempore facilis?</p>
+            </div>
+        </div>
+            <div class="columns">
+                <div class="col-1">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis expedita quos aut dolore sit quae commodi quam excepturi earum! Officia sed sint architecto laborum reprehenderit neque corporis, modi tempore facilis?</p>
+                </div>
+                <div class="col-2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim obcaecati aut. Pariatur vitae vel expedita perferendis deserunt. Deleniti impedit magni voluptatibus beatae rerum sit ratione quae esse optio omnis?
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quibusdam corrupti nemo reprehenderit aliquid nulla totam debitis? Delectus est, nulla odit harum dicta illum molestiae. At, officia! Reiciendis, sit laudantium.
+                    </p>
+                </div>
+                <div class="col-1">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis expedita quos aut dolore sit quae commodi quam excepturi earum! Officia sed sint architecto laborum reprehenderit neque corporis, modi tempore facilis?</p>
+                </div>
+        </div>
+
+    </div>
+</body>
+</html>
