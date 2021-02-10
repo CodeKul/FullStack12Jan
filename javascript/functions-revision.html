@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+
+        function greet(msg="Good",msg1="Morning") //parameters
+        {
+            console.log(msg,msg1)
+        }
+        greet() //arguments
+
+        //function expressions
+        
+        let add = function(x,y){
+            
+            console.log(x+y)
+        }
+        
+        add(100,500)
+        add(20,40)
+        add(50,50)
+
+
+    //arrow functions
+
+    let square = (z)=>{
+       
+        console.log(z*z)
+    }
+    square(10)
+
+    //factorial program
+
+    //pattern
+    let n =4
+    for(let i = 0;i<n;i++){
+        var str = ""
+        for(let j=1;j<n-i;j++){
+            str=str + " "
+        }
+        for(let k = 0;k<=i;k++){
+            str=str+"* "
+        }
+        console.log(str)
+    }
+    
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
