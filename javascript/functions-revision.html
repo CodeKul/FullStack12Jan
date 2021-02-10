@@ -50,6 +50,22 @@
         }
         console.log(str)
     }
+        //i=0 i<4    str=""
+        //j=1;j<4    str =str+" "  _
+        //j=2;2<4    str =str+" "  __
+        //j=3;3<4    str =str+" "  ___
+        //j=4;4<4    false
+        //k=0;0<=0   str=str+"* "  ___*_
+        //k=1;1<=0   false
+
+        //i=1;i<4   str=""
+        //j=1;j<3   str = str + " " _
+        //j=2;2<3   str = str+ " "  __
+        //j=3;3<3   false
+        //k=0;0<=1  str=str +"* "  __*_
+        //k=1;k<=i  str=str+"* "   __*_*_
+        //k=2;2<=1  false
+        
     
 
 
