@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="list-item">
+    <button id="btnAdd" onclick="add()">Add</button>
+    <!-- <p id="pId"></p> -->
+    
+    <script>
+        
+       // document.getElementById("pId").innerHTML="<b>Hello</b>"
+        
+        function add(){
+            var inputValue = document.getElementById("list-item").value
+            console.log(inputValue)
+            var ul = document.createElement('ul')
+            var li = document.createElement('li')
+            var removeBtn = document.createElement('button')
+            removeBtn.innerHTML="Remove"
+            li.append(inputValue)
+            li.append(removeBtn)
+            ul.append(li)
+            document.body.append(ul)
+            document.getElementById("list-item").value=""
+            
+            removeBtn.addEventListener('click',function(){
+                     li.remove()
+                })
+           
+            }
+    </script>
+</body>
+</html>

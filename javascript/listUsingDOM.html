@@ -13,6 +13,9 @@
         ul.setAttribute("id","drinks")
         ul.setAttribute("value","drinksList")
         console.log(ul)
+        ul.addEventListener('click',function(e){
+            e.target.append("Party")
+        })
         var li = document.createElement("li")
         var liText = document.createTextNode("Coffee")
         li.append(liText)
@@ -26,9 +29,6 @@
         document.body.append(ul)
         //childNodes ,firstChild,lastChild,parentNode
         console.log(ul.parentNode)
-
-
-       
     </script>
 </body>
 </html>

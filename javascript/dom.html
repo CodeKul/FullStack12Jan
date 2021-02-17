@@ -7,23 +7,37 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="firstDiv">
+        <h1 class="pClass-one" name="heading">My Page</h1>
+        <p id="test" class="pClass">Inside paragraph of the page</p>
+        <p id="total" name="heading"></p>
+    </div>
     <div>
-        <h1>My Page</h1>
-        <p id="test">Inside paragraph of the page</p>
-        <p id="total"></p>
+        <p class="pClass-one">Inside paragraph 2</p>
+        <h1>Another HEading</h1>
+    </div>
+    <div>
     </div>
     <script>
        //alert("Show me the alert")
     //    var number1 = prompt("Enter a number")
     //    var number2 =prompt("Enter a number")
-        let x =10
-        let y="20"
-       var output = x + parseInt(y)
-       console.log(output)
-       document.getElementById("total").innerHTML=parseInt(number1)+parseInt(number2)
-       document.getElementById("test").innerHTML="Changed Paragraph"
-
-    </script>
+    let x =10
+    let y="20"
+    var output = x + parseInt(y)
+    console.log(output)
+    document.getElementById("total").innerHTML=parseInt(x)+parseInt(y)
+    document.getElementById("test").innerHTML="<i>Changed Paragraph</i>"
+   var p =document.getElementsByTagName('p')
+   
+   for(let i=0;i<p.length;i++){
+    console.log(p[i])
+   }
+   console.log(document.getElementsByClassName("pClass"))
+    console.log(document.getElementsByName("heading"))
+    console.log(document.querySelector("#test"))
+    console.log(document.querySelectorAll("div.firstDiv>p"))
+</script>
 
     
 </body>
