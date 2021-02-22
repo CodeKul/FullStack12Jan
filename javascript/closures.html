@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Closure - function along with its lexical environment
+        //lexical environment -local environment of parent function
+        function outer(){
+            var z =90
+        function greeting(){
+            var x = 100
+            console.log(z)
+            console.log(x)
+            function display(){
+                var y =20
+                console.log(x)
+            }
+            return display
+        }
+      return greeting
+    }
+    let show =outer()
+    console.log(show)
+   let display1 = show()
+   display1()
+   
+        
+
+        
+    </script>
+</body>
+</html>

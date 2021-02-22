@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- function which is passed as a parameter to another function is callback -->
+
+    <script>
+         function add(a,b,display){
+             let c =a+b
+             display(c,show)
+         }
+         add(20,30,display)
+         function display(c,show){
+            let result = c+200
+            show(result,fun)
+         }
+
+         function show(result,fun){
+             console.log(result)
+             fun()
+         }
+
+         function fun(){
+             console.log("Inside fun")
+         }
+
+    </script>
+</body>
+</html>
