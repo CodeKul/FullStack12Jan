@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let isActive =true
+        let p =new Promise(function(resolve,reject){
+            let salary =5000
+            if(isActive){
+                resolve(salary)  
+            }else{
+                reject("Employee inactive")
+            }
+        })
+        .then(function(sal){
+            sal=sal+9000
+            return sal
+            
+        })
+        .then(function(sal){
+            sal = sal -1000
+            return sal
+        })
+        .then(function(sal){
+            console.log(sal)
+        })
+        .catch(function(errMsg){
+            console.log(errMsg)
+        })
+
+
+        //async await
+
+        async function incrementSalary(){
+            let amount = 10000
+            let p =new Promise(function(resolve,reject){
+                setTimeout(resolve(amount), 2000);
+            })
+
+            let output = await p;
+            console.log(output+2000)
+        }
+        incrementSalary()
+       
+
+    </script>
+</body>
+</html>
