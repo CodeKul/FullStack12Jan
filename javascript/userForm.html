@@ -12,8 +12,13 @@
         <input type="text" id="title" placeholder="Enter title">
         <input type="number" id="userid" placeholder="Enter userId">
         <input type="checkbox" id="status" value='Completed'>
-        <label for="status">Completed</label>
-        <button type="button" id="btn">Send Data</button>
+        <label for="status">Completed</label><br><br>
+        <label>Select gender</label>
+        <input type="radio" value="male" name="gender" id="male">
+        <label for="Male">Male</label>
+        <input type="radio" value="female" name="gender" id="female">
+        <label for="Male">Female</label><br><br>
+        <button type="button" id="btn">Send Data</button><br><br>
         <button type="button">Get Data</button>
 
     </form>
@@ -31,7 +36,17 @@
         }else{
             status = document.getElementById("status").value="Not Completed"
         }
+        let gender =""
+        let male = document.getElementById("male").checked
+        let female=document.getElementById("female").checked
+            
+        
+        
+            gender = document.getElementById("female").value
+        
+
         console.log(Id,title,userId,status)
+        console.log(selected)
         }
     </script>
 </body>
