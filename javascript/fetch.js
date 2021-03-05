@@ -22,6 +22,7 @@ function getUserData() {
 function sendData() {
   let userData = getUserData();
   //xmlHttpRequest,fetch,axios
+  //fetch(url,{method:,body:,headers:{'Content-type':"application/json"}})
   let p = fetch("https://jsonplaceholder.typicode.com/posts", {
     method: "POST",
     body: JSON.stringify(userData),
@@ -29,7 +30,9 @@ function sendData() {
   });
   console.log(p);
   p.then(function (response) {
-    console.log(response.json());
+    let output = response.json();
+    console.log(output);
+    return output;
   }).catch(function (err) {
     console.log(err);
   });
@@ -47,5 +50,22 @@ function getData() {
     return output;
   }).then(function (result) {
     console.log(result);
+    let tbl = `<table>
+    <tr>
+      <th>Body</th>
+      <th>title</th>
+      <th>id</th>
+      <th>userid</th>
+    </tr>`;
+
+    result.map((element) => {
+      tbl =tbl+ `<tr>
+            <td>${element.body}</td>
+            <td>${element.title}</td>
+            <td>${element.id}</td>
+            <td>${element.userId}</td>
+        </tr>`;
+    });
+    document.getElementById("msg").innerHTML = tbl;
   });
 }
