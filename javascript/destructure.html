@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(a,b,c,...y)  //rest parameter
+        {
+            let total = a+b+c
+            console.log(y)
+            return total
+        }
+        let x=[10,30,40,50]
+         let result=add(...x,30,50,60,100) //-->spread syntax
+
+        console.log(result)
+
+
+        let numbers=[100,300,400,300]
+
+        let[...c]=numbers
+        console.log(c)
+
+        let personName='JOhn'
+
+        let[p,q,r,s]=personName
+        console.log(p,q,r,s)
+
+
+        let employee={
+            firstName:"XYZ",
+            lastName:'ABC',
+            city:'Pune',
+            salary:40000
+        }
+
+        let{firstName,lastName,...remaining}=employee
+        firstName="Welcome"+firstName
+        
+        console.log(firstName)
+        console.log(lastName)
+        console.log(remaining)
+
+        function expression(num1,num2){
+                return [num1*num2 + num2*num1, num2/num1+num1/num2,"Hello World"]
+        }
+
+        let [elementOne,elementTwo,str]=expression(100,300)
+       
+        console.log(elementOne+' '+ elementTwo + '  '+ str)
+        
+
+
+    </script>
+</body>
+</html>
