@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn" onclick="displayQuote()">Quote</button>
+    <p id="display"></p>
+
+    <script>
+        // let quotes=[{
+        //     quote:"Honesty is the best policy"
+        // },
+        // {quote:"All is known in the sacredness of silence"},
+        // {quote:"Where awareness goes energy flows"}]
+        let quotes=["Honesty is the best policy","Hello","qwertyui"]
+        function displayQuote(){
+            console.log("Inside displayQuote")
+            quotes.forEach((item)=>{
+            console.log(item)
+              
+                document.getElementById("display").textContent=`Quote - ${item}`
+            }
+            )
+        }
+        
+
+    </script>
+</body>
+</html>
