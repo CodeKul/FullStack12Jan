@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <style>
+        .one{
+            border:2px solid black;
+            height: 100px;
+            width: 100px;
+            margin-bottom: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="one" ondragover="allowDrop(event)" ondrop="dropimg(event)">
+
+    </div>
+    <img id ="bulletimg" src="bullet.PNG" draggable="true" ondragstart="drag(event)">
+    <script>
+        function drag(e){
+            e.dataTransfer.setData("bullet",e.target.id)
+            console.log("Drag start")
+        }
+        function dropimg(e){
+            console.log("drag end")
+            var id = e.dataTransfer.getData("bullet")
+            console.log(id)
+            e.target.append(document.getElementById(id))
+        }
+        function allowDrop(e){
+            e.preventDefault()
+            console.log("drag over")
+          
+        }
+    </script>
+</body>
+</html>
