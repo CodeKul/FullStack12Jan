@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="number" placeholder="Enter a number">
+    <button onclick="calculateSquare()">Display square</button>
+    <div id="result"></div>
+    <script>
+
+        // helps to run js code parallel(multi threading)
+        var worker = new Worker("worker.js")
+        worker.onmessage=function(event){
+            document.getElementById("result").innerText="Square is"+event.data
+        }
+        function calculateSquare(){
+            var num =document.getElementById("number").value
+            worker.postMessage(num)   
+        }
+    </script>
+</body>
+</html>
